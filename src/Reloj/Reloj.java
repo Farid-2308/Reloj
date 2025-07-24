@@ -4,10 +4,14 @@
  */
 package Reloj;
 
-/**
- *
- * @author Farid
- */
-public class Reloj {
-    //puto
+
+public class Reloj extends  Tiempo implements Configurable {
+
+    @Override
+    public void configurar(int h, int m, int s) {
+        this.hora=h;
+        this.minuto=m;
+        this.segundo=s;
+    }
+    
 }
