@@ -5,24 +5,15 @@
 package Reloj;
 
 
-public class Cronometro {
-    private boolean iniciar;
-    private boolean reinicio;
+public class Cronometro extends Tiempo implements Controlable{
 
-    public boolean isIniciar() {
-        return iniciar;
-    }
-
-    public boolean isReinicio() {
-        return reinicio;
+    @Override
+    public void iniciar() {
+        this.activo=true;
     }
 
-    public void iniciar(){
-        this.iniciar=true;
+    @Override
+    public void detener() {
+        this.activo=false;
     }
-    
-    public void detener(){
-        this.iniciar=false;
-    }
-    
 }

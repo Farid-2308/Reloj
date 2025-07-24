@@ -12,13 +12,16 @@ public abstract class Tiempo {
     protected int hora;
     protected int minuto;
     protected int segundo;
+    protected boolean activo;
 
     public Tiempo() {
         this.hora = 0;
         this.minuto = 0;
         this.segundo = 0;
+        this.activo=false;
     }
     public void correr(){
+        if (this.activo) {
         segundo++;
         if (segundo==60) {
             segundo=0;
@@ -31,6 +34,7 @@ public abstract class Tiempo {
         if (hora==24) {
             hora=0;
             
+        }
         }
     }
     public String toString(){
